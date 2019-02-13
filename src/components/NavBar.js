@@ -21,12 +21,19 @@ class NavBar extends Component {
 		  <div id="navbarBasicExample" class="navbar-menu">
 		    <div class="navbar-start">
 		        <p class="navbar-item">Acerca de</p>
-		        <Link to='/projects'><p class="navbar-item">Proyectos</p></Link>
 		    <div class="navbar-item has-dropdown is-hoverable">
-		        <p class="navbar-link">Notas</p>
+		    	<p class="navbar-link"><Link to='/projects'>Proyectos</Link></p>
+		    	<div class="navbar-dropdown">
+		        	<p class="navbar-item"><Link to='/addproject'>Agregar</Link></p>
+					<p class="navbar-item"><Link to='/editproject'>Editar</Link></p> 
+		        </div>
+		    </div>
+		    <div class="navbar-item has-dropdown is-hoverable">
+		        <p class="navbar-link"><Link to='/notes'>Notas</Link></p>
 		        <div class="navbar-dropdown">
-		        	<p class="navbar-item">Revisar</p>
-					<p class="navbar-item">Agregar</p> 
+		        	<p class="navbar-item"><Link to='/addnotes'>Agregar</Link></p>
+					<p class="navbar-item"><Link to='/photos'>Revisar Fotos</Link></p> 
+					<p class="navbar-item"><Link to='/text'>Revisar Notas de Diario</Link></p> 
 		        </div>
 		    </div>
 		    </div>
