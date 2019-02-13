@@ -20,47 +20,28 @@ class NavBar extends Component {
 		 	</div>
 		  <div id="navbarBasicExample" class="navbar-menu">
 		    <div class="navbar-start">
-		      <a class="navbar-item">
-		        Acerca de
-		      </a>
-
-		      <a class="navbar-item">
-		        Proyectos
-		      </a>
-
-		      <div class="navbar-item has-dropdown is-hoverable">
-		        <a class="navbar-link">
-		          Notas
-		        </a>
+		        <p class="navbar-item">Acerca de</p>
+		        <Link to='/projects'><p class="navbar-item">Proyectos</p></Link>
+		    <div class="navbar-item has-dropdown is-hoverable">
+		        <p class="navbar-link">Notas</p>
 		        <div class="navbar-dropdown">
-		        <a class="navbar-item">
-		            Revisar
-		          </a>
-
-		          <a class="navbar-item">
-		            Agregar
-		          </a>
-		          
-		          
+		        	<p class="navbar-item">Revisar</p>
+					<p class="navbar-item">Agregar</p> 
 		        </div>
-		      </div>
 		    </div>
-
+		    </div>
 		    <div class="navbar-end">
 		      <div class="navbar-item">
 		        <div class="buttons">
-		          <a class="button is-link">
+		          <button class="button is-link">
 		            <strong>Sign up</strong>
-		          </a>
-		          <a class="button is-light">
-		            Log in
-		          </a>
+		          </button>
+		          <button class="button is-light">Log in</button>
 		        </div>
 		      </div>
 		    </div>
 		  </div>
 		</nav>
-
       </div>
     );
   }

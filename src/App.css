@@ -7,7 +7,7 @@
 }
 
 .text__front h1{
-	font-size: 35px;
+	font-size: 45px;
 	color: black;
 }
 
@@ -15,4 +15,8 @@
   background: url("./images/graffiti.jpg");
   background-size: cover;
   height: 600px;
+}
+.field{
+	width: 270px;
+
 }
