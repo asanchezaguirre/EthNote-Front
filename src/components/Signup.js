@@ -7,7 +7,7 @@ class Signup extends Component {
    onSubmitHandle = (e) => {
     e.preventDefault();
 
-    const API_URL = "http://localhost:3001/api/v1"
+    const API_URL = "https://stormy-falls-13377.herokuapp.com/api/v1/"
     fetch(`${API_URL}/auth/signup`, {
       method: "POST",
       headers: {
