@@ -32,8 +32,8 @@ class NavBar extends Component {
 		        <p class="navbar-link"><Link to='/notes'>Notas</Link></p>
 		        <div class="navbar-dropdown">
 		        	<p class="navbar-item"><Link to='/addnotes'>Agregar</Link></p>
-					<p class="navbar-item"><Link to='/photos'>Revisar Fotos</Link></p> 
-					<p class="navbar-item"><Link to='/text'>Revisar Notas de Diario</Link></p> 
+					<p class="navbar-item"><Link to='/photos'>Mostrar Fotografías por Nota</Link></p> 
+					<p class="navbar-item"><Link to='/text'>Mostrar Nota</Link></p> 
 		        </div>
 		    </div>
 		    </div>
