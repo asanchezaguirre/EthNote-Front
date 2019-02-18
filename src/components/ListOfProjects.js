@@ -72,7 +72,7 @@ class ListOfProjects extends Component {
     return (
       <div>
       	<div>
-          <img src={metro} is-3by1/>
+          <img src={metro} className = "cover_image"/>
         </div>
       	Lista de proyectos
         {this.state.projects.map(project => (

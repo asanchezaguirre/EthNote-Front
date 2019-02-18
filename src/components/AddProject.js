@@ -100,14 +100,14 @@ class AddProject extends Component {
     return (
       <div>
       	<div>
-          <img src={latino} className="top__image"/>
+          <img src={latino} className="cover_image"/>
         </div>
       	Agregar proyecto
         <form onSubmit={this.onSubmit}>
         	<div class="field">
-                <label class="label">Título</label>
+                <label class="label has-text-dark">Título</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input name="title" class="input is-success" type="text" placeholder="Text input" />
+                  <input name="title" class="input" type="text" placeholder="Text input" />
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -117,9 +117,9 @@ class AddProject extends Component {
                 </div>
           </div>
           <div class="field">
-                <label class="label">Tema</label>
+                <label class="label has-text-dark">Tema</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input name="topic" class="input is-success" type="text" placeholder="Text input" />
+                  <input name="topic" class="input" type="text" placeholder="Text input" />
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -129,9 +129,9 @@ class AddProject extends Component {
                 </div>
           </div>
           <div class="field">
-                <label class="label">Objetivo</label>
+                <label class="label has-text-dark">Objetivo</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input name="objective" class="input is-success" type="text" placeholder="Text input" />
+                  <input name="objective" class="input" type="text" placeholder="Text input" />
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -141,9 +141,9 @@ class AddProject extends Component {
                 </div>
           </div>
           <div class="field">
-                <label class="label">Categorías</label>
+                <label class="label has-text-dark">Categorías</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input name="categories" class="input is-success" type="text" placeholder="Text input" />
+                  <input name="categories" class="input" type="text" placeholder="Text input" />
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -152,7 +152,7 @@ class AddProject extends Component {
                   </span>
                 </div>
           </div>
-          <button type='submit'  variant='contained' class="button is-link">Agregar Proyecto</button>
+          <button type='submit'  variant='contained' class="button is-link is-small">Agregar Proyecto</button>
         </form>
       </div>
     );

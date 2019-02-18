@@ -57,7 +57,7 @@ class Login extends Component {
 	  			<div className= "text__front">
 	  			<h1>ETH</h1>
 	  			<h1>NOTE</h1>
-	  				<form onSubmit={ this.onSubmit }>
+	  				<form onSubmit={ this.onSubmit } className="buttons_bg">
 	                    <div class="field">
 						  <p class="control has-icons-left has-icons-right">
 						    <input name='email' class="input" type="email" placeholder="Email"/>
@@ -78,8 +78,8 @@ class Login extends Component {
 						  </p>
 						</div>
 						{ this.state.error.status && <p>{ this.state.error.message }</p>}
-	                    <button class="button">Login</button>
-	                    <Link to='/signup'><div>Sign Up</div></Link>
+	                    <button class="button is-link is-normal">Login</button>
+	                    <Link to='/signup'><button class="button is-info is-normal">Sign Up</button></Link>
                     </form>
                 </div>  
 	  	</div>

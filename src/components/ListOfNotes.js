@@ -10,7 +10,7 @@ class ListOfNotes extends Component {
      
       <div>
        <div>
-          <img src={luz} is-small/>
+          <img src={luz} className="cover_image"/>
       </div>
       	Lista de notas
       	<div>

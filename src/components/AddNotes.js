@@ -7,7 +7,7 @@ class AddNotes extends Component {
     return (
       <div>
       	<div>
-          <img src={luchador} is-3by1/>
+          <img src={luchador} className="cover_image"/>
         </div>
       	Agregar notas
       	<div>

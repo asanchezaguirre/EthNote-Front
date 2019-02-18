@@ -1,9 +1,14 @@
-
+.navbar-brand, .navbar-tabs {
+  display: flex;
+  flex-shrink: 0;
+  min-height: 3.25rem;
+  align-items: center;
+}
 
 .fondo__login {
-  background: url("./images/rectangle.png");
+  background: url("./images/casa.jpg");
   background-size: cover;
-  height: 600px;
+  height: 100vh;
 }
 
 .text__front h1{
@@ -14,13 +19,53 @@
 .fondo__signup {
   background: url("./images/graffiti.jpg");
   background-size: cover;
-  height: 600px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
 }
 .field{
 	width: 270px;
 
 }
-.top__image{
-	width: 80%;
-	height: 40vh;
+.cover_image {
+  max-height: 28rem;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+.buttons_bg{
+    background: #633aff3b;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signup_bg{
+  background: #06040c9c;
+  width: 50%;
+  height: 100%;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 70%;
+}
+.label {
+  color: #f2f3f3;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.is-normal {
+  width: 100px;
+  height: 38px;
+  margin: 1%;
 }

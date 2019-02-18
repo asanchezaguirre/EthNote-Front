@@ -7,7 +7,7 @@ class Text extends Component {
     return (
       <div>
       	<div>
-	        <img src={perro} is-3by1/>
+	        <img src={perro} className="cover_image"/>
 	    </div>
       	Nota
       	<div class="tile is-vertical is-2">

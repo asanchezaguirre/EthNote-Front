@@ -9,7 +9,7 @@ class Home extends Component {
     return (
       <div>
       	<div>
-          <img src={madero} is-3by1/>
+          <img src={madero} className ="cover_image"/>
         </div>
         <div>
           <h4>UNA APP PARA LA INVESTIGACIÓN CUALITATIVA</h4>

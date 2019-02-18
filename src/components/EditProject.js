@@ -7,7 +7,7 @@ class EditProject extends Component {
     return (
       <div>
       	<div>
-          <img src={barrio} is-3by1/>
+          <img src={barrio} className="cover_image"/>
         </div>
       	Editar proyecto
       	<div class="field">
