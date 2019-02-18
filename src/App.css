@@ -1,7 +1,7 @@
 
 
 .fondo__login {
-  background: url("./images/casa.jpg");
+  background: url("./images/rectangle.png");
   background-size: cover;
   height: 600px;
 }
@@ -19,4 +19,8 @@
 .field{
 	width: 270px;
 
+}
+.top__image{
+	width: 80%;
+	height: 40vh;
 }

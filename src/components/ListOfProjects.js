@@ -5,7 +5,11 @@ import { Tile } from "react-bulma-components/full";
 import { Link } from 'react-router-dom';
 
 class ListOfProjects extends Component {
+
   render() {
+    console.log(localStorage.getItem('token'))
+
+
     return (
       <div>
       	<div>

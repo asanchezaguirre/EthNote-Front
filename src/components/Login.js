@@ -29,24 +29,26 @@ class Login extends Component {
 		    })
 		    .then(response => response.json())
 		    .then(data => {
-		      if(typeof data.token !== "undefined") {
-
-		        localStorage.setItem("token", data.token);
-		        const url = window.decodeURIComponent(this.props.location.search);
-		        this.props.history.push("/projects");
-
-		      } else {
-		        this.setState({
-		          error: {
-		            status: true,
-		            message: data.message
-		          }
-		        })
-		      }
-		    })
-		    .catch(e => alert(e));
-		  }
-
+		       if (typeof data.token !== 'undefined') {
+          localStorage.setItem('token', data.token)
+          const url = window.decodeURIComponent(this.props.location.search)
+          console.log(url)
+          if (url !== '') {
+            this.props.history.push('/' + url.split('/')[1] || '/')
+          } else {
+            this.props.history.push('/')
+          }
+        } else {
+          this.setState({
+            error: {
+              status: true,
+              message: data.message
+            }
+          })
+        }
+      })
+      .catch(e => alert(e))
+  }
 
 
   render() {
