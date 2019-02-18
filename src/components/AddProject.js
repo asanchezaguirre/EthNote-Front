@@ -37,7 +37,7 @@ class AddProject extends Component {
         const currentUser = data.users.filter(user => {
           if (user.email === t.email) {
             this.setState({ user: user })
-            console.log(user._id)
+            return user
           }
         })
       })
