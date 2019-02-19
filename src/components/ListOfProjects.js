@@ -10,7 +10,8 @@ class ListOfProjects extends Component {
     this.state={
       users:[],
       local: '',
-      projects:[]
+      projects:[],
+      projectId:''
     }
   }
 
@@ -76,25 +77,32 @@ class ListOfProjects extends Component {
         </div>
       	Lista de proyectos
         {this.state.projects.map(project => (
-
-      	<div class="tile is-vertical is-2">
-      		<div class="tile">
-  		      	<div class="tile is-parent is-vertical">
-  			        <article class="tile is-child notification is-dark">
-  			          <p class="title">{project.title}</p>
-  			          <p class="subtitle">{project.objective}</p>
-  			          <p class="subtitle">{project.categories}</p>
-  			        </article>   
-  		      	</div>
-  		      </div>
-  		  </div>
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">{project.title}</p>
+              <a href="#" class="card-header-icon" aria-label="more options">
+                <span class="icon">
+                  <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </a>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <p>{project.objective}</p>
+                <p>{project.categories}</p>
+                <br/>
+              </div>
+            </div>
+            <footer class="card-footer">
+              <Link to='/notes' class="card-footer-item"><button onClick={()=>this.props.onChangeValue(project._id)}>Seleccionar</button></Link>
+              <a href="#" class="card-footer-item">Borrar</a>
+            </footer>
+          </div>
+      	
 		   ))}
 	  	  <div>
       		<Link to='/addproject'><button class="button is-link is-small">Agregar Proyecto</button></Link>
-      	</div>
-      	<div>
-      		<button class="button is-link is-small">Borrar Proyecto</button>
-		    </div>      
+      	</div>    
       </div>
     );
   }

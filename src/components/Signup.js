@@ -47,7 +47,6 @@ class Signup extends Component {
                   <i class="fas fa-check"></i>
                 </span>
               </div>
-              <p class="has-text-white">El nombre de usuario está disponible</p>
             </div>
             <div class="field">
               <label class="label">Email</label>
@@ -60,7 +59,6 @@ class Signup extends Component {
                   <i class="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
-              <p class="has-text-white">Este email está disponible</p>
             </div>
             <div class="field">
               <label class="label">Password</label>
@@ -97,14 +95,6 @@ class Signup extends Component {
                     <option>Otro</option>
                   </select>
                 </div>
-              </div>
-            </div>
-            <div class="field">
-              <div class="control">
-                <label class="checkbox has-text-white">
-                  <input type="checkbox"/>
-                  I agree to the <a href="#">terms and conditions</a>
-                </label>
               </div>
             </div>
             <div class="field is-grouped">

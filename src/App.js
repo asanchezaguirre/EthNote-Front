@@ -22,6 +22,19 @@ import './App.css';
 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      projectId: ''
+    }
+  }
+
+  onChangeValue=(newvalue) =>{
+    this.setState({
+      projectId: newvalue
+    })
+  }
+
   render() {
     return (
       <div >
@@ -30,12 +43,12 @@ class App extends Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/signup' component={Signup} />
-          <PrivateRoute  path='/projects' component={ListOfProjects} />
+          <Route  path='/projects' render={(props)=> <ListOfProjects {...props} data={this.state.projectId} onChangeValue={this.onChangeValue}/>}  exact/>
 
-          <Route exact path='/addnotes' component={AddNotes} />
+          <Route exact path='/addnotes' render={(props)=> <AddNotes {...props} data={this.state.projectId} />} exact/>
           <Route exact path='/addproject' component={AddProject} />
           <Route exact path='/editproject' component={EditProject} />
-          <Route exact path='/notes' component={ListOfNotes} />
+          <Route exact path='/notes' render={(props)=> <ListOfNotes {...props} data={this.state.projectId} />} exact/>
           <Route exact path='/photos' component={Photos} />
           <Route exact path='/text' component={Text} />
 
