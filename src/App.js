@@ -12,8 +12,8 @@ import AddProject from './components/AddProject';
 import EditProject from './components/EditProject';
 import ListOfNotes from './components/ListOfNotes';
 import ListOfProjects from './components/ListOfProjects';
-import Photos from './components/Photos';
-import Text from './components/Text';
+import Note from './components/Note';
+
 
 
 import PrivateRoute from "./components/PrivateComponent";
@@ -25,7 +25,8 @@ class App extends Component {
   constructor(){
     super();
     this.state={
-      projectId: ''
+      projectId: '',
+      
     }
   }
 
@@ -47,10 +48,9 @@ class App extends Component {
 
           <Route exact path='/addnotes' render={(props)=> <AddNotes {...props} data={this.state.projectId} />} exact/>
           <Route exact path='/addproject' component={AddProject} />
-          <Route exact path='/editproject' component={EditProject} />
+          <Route exact path='/editproject' render={(props)=> <EditProject {...props} data={this.state.projectId} />} exact/>
           <Route exact path='/notes' render={(props)=> <ListOfNotes {...props} data={this.state.projectId} />} exact/>
-          <Route exact path='/photos' component={Photos} />
-          <Route exact path='/text' component={Text} />
+          <Route exact path='/note' component={Note} />
 
         </Switch>
       

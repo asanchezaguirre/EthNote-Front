@@ -99,9 +99,7 @@ class ListOfNotes extends Component {
                     </div>
                   </div>
                   <footer class="card-footer">
-                   <button>Ver texto</button>
-                   <button>Ver fotografías</button>
-                    
+                   <button>Ver detalle</button>
                   </footer>
                 </div>
               

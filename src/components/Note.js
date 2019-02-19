@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import iglesia from '../images/iglesia.jpg'
 
 
-class Photos extends Component {
+class Note extends Component {
   render() {
     return (
       <div>
@@ -26,4 +26,4 @@ class Photos extends Component {
   }
 }
 
-export default Photos;
+export default Note;
