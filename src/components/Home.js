@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import madero from '../images/madero.jpg'
+import isLoggedIn from '../utils/isLoggedIn'
 
 import { Link } from 'react-router-dom';
 
@@ -19,8 +20,12 @@ class Home extends Component {
               en campo
           </h8>
         </div>
-        <Link to="/login"><button class="button is-link is-medium">Log In</button></Link>
-    
+        {!isLoggedIn() && (
+               <Link to="/login"><button class="button is-link is-medium">Log In</button></Link>  
+              )}
+              {isLoggedIn() && (
+                  <p></p>
+            )}
       </div>
     );
   }

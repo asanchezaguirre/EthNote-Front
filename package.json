@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@date-io/date-fns": "^1.1.0",
     "bulma-extensions": "^4.1.0",
+    "date-fns": "^2.0.0-alpha.27",
+    "material-ui": "^0.20.2",
+    "material-ui-pickers": "^2.2.1",
     "react": "^16.8.1",
     "react-bulma-components": "^2.3.0",
     "react-dom": "^16.8.1",
@@ -24,5 +28,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/date-fns": "^2.6.0"
+  }
 }

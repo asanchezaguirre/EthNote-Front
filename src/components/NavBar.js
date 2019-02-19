@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import { Navbar } from "react-bulma-components/full";
 import logo from '../images/ethnote.png';
+import isLoggedIn from '../utils/isLoggedIn'
 
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from "react-router-dom";
 
 
 class NavBar extends Component {
+
+	handleLogout = () => {
+    const { history } = this.props
+
+    localStorage.removeItem('token');
+    history.push('/')
+  }
+
+
   render() {
     return (
       <div>
@@ -28,23 +38,26 @@ class NavBar extends Component {
 					<p class="navbar-item"><Link to='/editproject'>Editar</Link></p> 
 		        </div>
 		    </div>
-		    <div class="navbar-item has-dropdown is-hoverable">
-		        <p class="navbar-link"><Link to='/notes'>Notas</Link></p>
-		        <div class="navbar-dropdown">
-		        	<p class="navbar-item"><Link to='/addnotes'>Agregar</Link></p>
-					<p class="navbar-item"><Link to='/photos'>Mostrar Fotografías por Nota</Link></p> 
-					<p class="navbar-item"><Link to='/text'>Mostrar Nota</Link></p> 
-		        </div>
-		    </div>
 		    </div>
 		    <div class="navbar-end">
 		      <div class="navbar-item">
-		        <div class="buttons">
-		          <button class="button is-link">
-		            <strong>Sign up</strong>
-		          </button>
-		          <button class="button is-light">Log in</button>
-		        </div>
+		      	{!isLoggedIn() && (
+		      		<div class="buttons">
+			          <button class="button is-link">
+			            <strong>Sign up</strong>
+			          </button>
+			          <button class="button is-light">Log in</button>
+			        </div>
+		            
+		          )}
+		          {isLoggedIn() && (
+		          	<div>
+			        	<Link className='NavMenu' to='/login'>
+			              <p>Hola usuario</p>
+			            </Link>
+			            <button onClick={ this.handleLogout }>Logout</button>
+		            </div>
+		        )}
 		      </div>
 		    </div>
 		  </div>
@@ -54,4 +67,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

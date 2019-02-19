@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 class ListOfNotes extends Component {
-	constructor(){
+  constructor(){
     super()
     this.state={
       users:[],
@@ -72,7 +72,7 @@ class ListOfNotes extends Component {
 
 
   render() {
-  	console.log(this.props.data)
+    console.log(this.props.data)
     return (
 
      
@@ -80,7 +80,7 @@ class ListOfNotes extends Component {
        <div>
           <img src={luz} className="cover_image"/>
       </div>
-      	Lista de notas
+        Lista de notas
         {this.state.notes.map(note => (
            <div class="card">
                   <header class="card-header">
@@ -104,10 +104,10 @@ class ListOfNotes extends Component {
                 </div>
               
              ))}
-		<div>
-			<Link to='/addnotes'><button class="button is-link is-small">Agregar Nota</button></Link>
-		</div>
-		
+    <div>
+      <Link to='/addnotes'><button class="button is-link is-small">Agregar Nota</button></Link>
+    </div>
+    
 
 
       </div>

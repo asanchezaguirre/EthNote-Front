@@ -73,20 +73,20 @@ onSubmit = e => {
     //console.log(this.props.data)
     return (
       <div>
-      	<div>
+        <div>
           <img src={luchador} className="cover_image"/>
         </div>
           <form onSubmit={this.onSubmit}>
-          	Agregar notas
-          	<div>
-          		<p>Ubicación</p><input name="location" class="input is-success" type="text" placeholder="Ubicacion" />
-          		<p>Fecha</p><input name="date" class="input is-success" type="text" placeholder="Fecha" />
-          		<p>Periodo</p><input name="period" class="input is-success" type="text" placeholder="Periodo" />
-          	</div>
-          	<textarea name="listOfText1" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
-          	<textarea name="listOfText2" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
-          	<input name="listOfPhotos" class="input is-success" type="text" placeholder="Fotografías" />
-          	<button type='submit' class="button is-link is-small">Agregar Nota</button>
+            Agregar notas
+            <div>
+              <p>Ubicación</p><input name="location" class="input is-success" type="text" placeholder="Ubicacion" />
+              <p>Fecha</p><input name="date" class="input is-success" type="text" placeholder="Fecha" />
+              <p>Periodo</p><input name="period" class="input is-success" type="text" placeholder="Periodo" />
+            </div>
+            <textarea name="listOfText1" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
+            <textarea name="listOfText2" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
+            <input name="listOfPhotos" class="input is-success" type="text" placeholder="Fotografías" />
+            <button type='submit' class="button is-link is-small">Agregar Nota</button>
           </form>
       </div>
     );
