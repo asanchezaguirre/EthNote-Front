@@ -7,6 +7,47 @@ import { Link, withRouter } from "react-router-dom";
 
 
 class NavBar extends Component {
+	constructor(){
+    super()
+    this.state={
+      users:[],
+      name:''
+     
+    }
+  }
+
+  componentDidMount () {
+    fetch('https://stormy-falls-13377.herokuapp.com/api/v1/users', {
+      headers:{
+          "Authorization": `barear ${localStorage.getItem("token")}`
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        //console.log(data.users)
+        this.setState({
+          users: data.users
+        })
+
+        const token = localStorage.getItem('token')
+        //console.log(token);
+        let base64Url = token.split('.')[1]
+        let base64 = base64Url.replace('-', '+').replace('_', '/')
+        const t = JSON.parse(window.atob(base64))
+        //console.log(t.email)
+        const currentUser = data.users.filter(user => {
+          if (user.email === t.email) {
+            this.setState({ 
+            	user:user,
+            	name: user.name
+             })
+            
+            return user
+          }
+        })
+        //console.log(currentUser)
+      })
+  }
 
 	handleLogout = () => {
     const { history } = this.props
@@ -53,7 +94,7 @@ class NavBar extends Component {
 		          {isLoggedIn() && (
 		          	<div>
 			        	<Link className='NavMenu' to='/login'>
-			              <p>Hola usuario</p>
+			              <p>Hola {this.state.name}</p>
 			            </Link>
 			            <button onClick={ this.handleLogout }>Logout</button>
 		            </div>
