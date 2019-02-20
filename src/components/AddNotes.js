@@ -85,7 +85,22 @@ onSubmit = e => {
             </div>
             <textarea name="listOfText1" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
             <textarea name="listOfText2" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
-            <input name="listOfPhotos" class="input is-success" type="text" placeholder="Fotografías" />
+              <div>
+                Agregar Fotografìas
+              </div>
+            <div class="file">
+              <label class="file-label">
+                <input class="file-input" type="file" name="resume"/>
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Selecciona archivo…
+                  </span>
+                </span>
+              </label>
+            </div>
             <button type='submit' class="button is-link is-small">Agregar Nota</button>
           </form>
       </div>
