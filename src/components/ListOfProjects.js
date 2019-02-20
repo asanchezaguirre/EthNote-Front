@@ -95,7 +95,7 @@ class ListOfProjects extends Component {
             </div>
             <footer class="card-footer">
               <Link to='/notes' class="card-footer-item"><button onClick={()=>this.props.onChangeValue(project._id)}>Seleccionar</button></Link>
-              <a href="#" class="card-footer-item">Borrar</a>
+           
              <Link to='/editproject' class="card-footer-item"><button onClick={()=>this.props.onChangeValue(project._id)}>Editar</button></Link>
             </footer>
           </div>

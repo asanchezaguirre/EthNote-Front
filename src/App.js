@@ -50,7 +50,7 @@ class App extends Component {
           <Route exact path='/addproject' component={AddProject} />
           <Route exact path='/editproject' render={(props)=> <EditProject {...props} data={this.state.projectId} />} exact/>
           <Route exact path='/notes' render={(props)=> <ListOfNotes {...props} data={this.state.projectId} />} exact/>
-          <Route exact path='/note' component={Note} />
+          <Route path='/notes/:noteId' component={Note} />
 
         </Switch>
       

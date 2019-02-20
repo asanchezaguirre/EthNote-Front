@@ -99,7 +99,7 @@ class ListOfNotes extends Component {
                     </div>
                   </div>
                   <footer class="card-footer">
-                   <button>Ver detalle</button>
+                   <Link  to={`/notes/${note._id}`}><button>Ver detalle</button></Link>
                   </footer>
                 </div>
               
