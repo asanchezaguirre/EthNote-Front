@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import luchador from '../images/luchador.jpg'
+
 
 
 class AddNotes extends Component {
@@ -72,19 +72,25 @@ onSubmit = e => {
   render() {
     //console.log(this.props.data)
     return (
-      <div>
-        <div>
-          <img src={luchador} className="cover_image"/>
-        </div>
-          <form onSubmit={this.onSubmit}>
+      <div className="note-background">
+          <form  className="addnote-form"onSubmit={this.onSubmit}>
+          <div className="field_addnote">
             Agregar notas
             <div>
               <p>Ubicación</p><input name="location" className ="input is-success" type="text" placeholder="Ubicacion" />
               <p>Fecha</p><input name="date" className ="input is-success" type="text" placeholder="Fecha" />
               <p>Periodo</p><input name="period" className ="input is-success" type="text" placeholder="Periodo" />
             </div>
-            <textarea name="listOfText1" className ="input" placeholder="10 lines of textarea" rows="10" className ="textarea is-small"></textarea>
-            <textarea name="listOfText2" className ="input" placeholder="10 lines of textarea" rows="10" className ="textarea is-small"></textarea>
+            <div className="container_addnote">
+              <div className="children_addnote">
+                <p>Nota descriptiva</p>
+                <textarea name="listOfText1" className ="input" placeholder="10 lines of textarea" rows="10" className ="textarea is-small"></textarea>
+              </div>
+              <div className="children_addnote">
+                <p>Nota personal</p>
+                <textarea name="listOfText2" className ="input" placeholder="10 lines of textarea" rows="10" className ="textarea is-small"></textarea>
+              </div>
+            </div>
               <div>
                 Agregar Fotografìas
               </div>
@@ -92,6 +98,7 @@ onSubmit = e => {
                       <input className ="file-input" type="file" name="listOfPhotos" placeholder="Nombre del archivo"/>
                       
             <button type='submit' className ="button is-link is-small">Agregar Nota</button>
+          </div>
           </form>
       </div>
     );

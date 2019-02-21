@@ -36,7 +36,7 @@ class Signup extends Component {
       
         <div className="fondo__signup">
           <form onSubmit={ this.onSubmitHandle } className="signup_bg">
-            <div className ="field">
+            <div className ="field_signup">
               <label className ="label">Nombre</label>
               <div className ="control has-icons-left has-icons-right">
                 <input name="name" className ="input" type="text" placeholder="Text input" />
@@ -48,7 +48,7 @@ class Signup extends Component {
                 </span>
               </div>
             </div>
-            <div className ="field">
+            <div className ="field_signup">
               <label className ="label">Email</label>
               <div className ="control has-icons-left has-icons-right">
                 <input name="email" className ="input" type="email" placeholder="Email input" />
@@ -56,35 +56,35 @@ class Signup extends Component {
                   <i className ="fas fa-envelope"></i>
                 </span>
                 <span className ="icon is-small is-right">
-                  <i className ="fas fa-exclamation-triangle"></i>
+                  <i className ="fas fa-check"></i>
                 </span>
               </div>
             </div>
-            <div className ="field">
+            <div className ="field_signup">
               <label className ="label">Password</label>
               <div className ="control has-icons-left has-icons-right">
                 <input name="password" className ="input" type="password" placeholder="Email input" />
                 <span className ="icon is-small is-left">
-                  <i className ="fas fa-envelope"></i>
+                  <i className ="fas fa-lock"></i>
                 </span>
                 <span className ="icon is-small is-right">
-                  <i className ="fas fa-exclamation-triangle"></i>
+                  <i className ="fas fa-check"></i>
                 </span>
               </div>
             </div>
-            <div className ="field">
+            <div className ="field_signup">
               <label className ="label">Número Telefónico</label>
               <div className ="control has-icons-left has-icons-right">
                 <input name="phoneNumber" className ="input" type="tel" placeholder="Num Telefónico input" />
                 <span className ="icon is-small is-left">
-                  <i className ="fas fa-envelope"></i>
+                  <i className ="fas fa-phone"></i>
                 </span>
                 <span className ="icon is-small is-right">
-                  <i className ="fas fa-exclamation-triangle"></i>
+                  <i className ="fas fa-check"></i>
                 </span>
               </div>
             </div>
-            <div className ="field">
+            <div className ="field_signup">
               <label className ="label">Occupation</label>
               <div className ="control">
                 <div className ="select">

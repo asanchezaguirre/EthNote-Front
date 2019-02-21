@@ -11,12 +11,10 @@ class Home extends Component {
       <div className = "home_cover">
       <div className = "signup_bg">
          <div>
-          <h1 className = "title is-3 has-text-white">UNA APP PARA LA INVESTIGACIÓN CUALITATIVA</h1>
-        </div>
-        <div>
-          <h3 className = "title is-6 has-text-white">EthNote es una herramienta de recopilación de datos para investigadores
+          <p className = "title is-3 has-text-white is-spaced">UNA APP PARA LA INVESTIGACIÓN CUALITATIVA</p>
+          <p className = "subtitle is-5 has-text-white">EthNote es una herramienta de recopilación de datos para investigadores
               en campo
-          </h3>
+          </p>
         </div>
         {!isLoggedIn() && (
                <Link to="/login"><button class="button is-link is-medium">Log In</button></Link>  

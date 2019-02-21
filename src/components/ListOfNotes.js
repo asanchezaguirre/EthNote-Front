@@ -67,49 +67,39 @@ class ListOfNotes extends Component {
   }
 
 
-
-
-
-
   render() {
     console.log(this.props.data)
-    return (
-
-     
+    return ( 
       <div>
-       <div>
-          <img src={luz} className="cover_image"/>
-      </div>
-        Lista de notas
-        {this.state.notes.map(note => (
-           <div className ="card">
+        <div>
+          <div className="call-to-action-container">
+            <span className = "title is-2 is-spaced has-text-centered" >Lista de Notas</span>
+            <Link to='/addnotes'><button className ="button is-link is-outlined">Agregar Nota</button></Link>
+          </div>
+          <div>
+            <img src={luz} className="cover_image"/>
+          </div>
+          <div className="cards-container">
+            {this.state.notes.map(note => (
+                <div className ="card">
                   <header className ="card-header">
-                    <p className ="card-header-title">{note.location}</p>
-                    <a href="#" className ="card-header-icon" aria-label="more options">
-                      <span className ="icon">
-                        <i className ="fas fa-angle-down" aria-hidden="true"></i>
-                      </span>
-                    </a>
+                    <p>Lugar:</p>
+                    <p className ="card-header-title">{note.location}</p> 
                   </header>
                   <div className ="card-content">
                     <div className ="content">
-                      <p>{note.date}</p>
-                      <p>{note.period}</p>
+                      <p>Fecha: {note.date}</p>
+                      <p>Periodo: {note.period}</p>
                       <br/>
                     </div>
                   </div>
-                  <footer className ="card-footer">
-                   <Link  to={`/notes/${note._id}`}><button>Ver detalle</button></Link>
+                  <footer className ="card-footer has-text-centered">
+                   <Link  to={`/notes/${note._id}`} className = "card-footer-item"><button className ="button is-link is-outlined is-centered">Ver detalle</button></Link>
                   </footer>
                 </div>
-              
-             ))}
-    <div>
-      <Link to='/addnotes'><button className ="button is-link is-small">Agregar Nota</button></Link>
-    </div>
-    
-
-
+            ))}
+          </div>   
+        </div>
       </div>
     );
   }

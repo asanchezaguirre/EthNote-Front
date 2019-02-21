@@ -39,33 +39,33 @@ componentDidMount(){
         })
 
       })
-      .catch(e => alert(e))
-      
-      
+      .catch(e => alert(e))   
   }
-
-
-
-
-
 
   render() { 
     
     return (
       <div className="note-background">
       	<div className="note">
-          <p>Detalle de nota </p>
+          <p className="title is-3">Detalle de nota </p>
         {
           <div className ="tile is-vertical">
             <div className ="tile">
                 <div className ="tile is-parent is-vertical">
                   <article className ="tile is-child notification note">
                     <p className ="subtittle is-4 has-text-weight-semibold">Lugar: {this.state.note.location}</p>
-                    <p className ="subtittle is-4 has-text-weight-semibold">Fecha: {this.state.note.date}</p> 
+                    <p className ="subtittle is-4 has-text-weight-semibold">Fecha:{this.state.note.date}</p> 
                     <p className ="subtittle is-4 has-text-weight-semibold">Periodo: {this.state.note.period}</p>
-                    <p className ="subtittle is-4 has-text-weight-semibold">Nota Descriptiva: {this.state.text}</p>
-                    <p className ="subtittle is-4 has-text-weight-semibold">Nota Personal: {this.state.text1}</p>
-                    
+                    <div className="container_note">
+                      <div className="note">
+                        <p className ="subtittle is-4 has-text-weight-semibold">Nota Descriptiva:</p>
+                        <p className ="subtittle is-4 has-text-weight-semibold">{this.state.text}</p>
+                      </div>
+                      <div className="note">
+                        <p className ="subtittle is-4 has-text-weight-semibold">Nota Personal:</p>
+                        <p className ="subtittle is-4 has-text-weight-semibold">{this.state.text1}</p>
+                      </div>
+                    </div>
                   </article>   
                 </div>
             </div>     

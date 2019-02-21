@@ -107,7 +107,7 @@
     margin: 0 auto;
 }
 .field {
-    width: 80%;
+    width: 35%;
     margin: 0 auto;
     margin-bottom: 0px;
     padding: 2%;
@@ -124,4 +124,45 @@
 }
 .is-parent{
   background-color: #7a76764d;
+  width: 90%;
+}
+.field_signup{
+    width: 35%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: -3%;
+}
+.field_addproject{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  padding: 2%;
+}
+.container_note{
+  display:flex;
+  justify-content: space-around;
+}
+.note{
+  width:70%;
+}
+.tile.is-vertical{
+  width: 212%;
+}
+.addnote-form{
+    width: 80%;
+    background-color: rgba(216, 210, 210, 0.80);
+    margin: 0 auto;
+}
+.field_addnote{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  padding: 2%;
+}
+.container_addnote{
+  display: flex;
+  justify-content:space-between;
+}
+.children_addnote{
+  width:48%;
 }

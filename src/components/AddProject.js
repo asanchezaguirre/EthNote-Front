@@ -93,56 +93,43 @@ class AddProject extends Component {
 
 
   render() {
-
     return (
       <div>
       	<div>
           <img src={latino} className="cover_image"/>
         </div>
         <form className = "add-project-form" onSubmit={this.onSubmit}>
-        	<div className = "field">
+        	<div className = "field_addproject">
                 <label className = "label has-text-dark">Título</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="title" className = "input" type="text" placeholder="Text input" />
-                  <span className = "icon is-small is-left">
-                    <i className = "fas fa-user"></i>
-                  </span>
+                  <input name="title" className = "input" type="text" placeholder="Título del proyecto" />
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
                 </div>
           </div>
-          <div className = "field">
+          <div className = "field_addproject">
                 <label className = "label has-text-dark">Tema</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="topic" className = "input" type="text" placeholder="Text input" />
-                  <span className = "icon is-small is-left">
-                    <i className = "fas fa-user"></i>
-                  </span>
+                  <input name="topic" className = "input" type="text" placeholder="Tema del proyecto" />
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
                 </div>
           </div>
-          <div className = "field">
+          <div className = "field_addproject">
                 <label className = "label has-text-dark">Objetivo</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="objective" className = "input" type="text" placeholder="Text input" />
-                  <span className = "icon is-small is-left">
-                    <i className = "fas fa-user"></i>
-                  </span>
+                  <input name="objective" className = "input" type="text" placeholder="Objetivo del proyecto" />
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
                 </div>
           </div>
-          <div className = "field">
+          <div className = "field_addproject">
                 <label className = "label has-text-dark">Categorías</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="categories" className = "input" type="text" placeholder="Text input" />
-                  <span className = "icon is-small is-left">
-                    <i className = "fas fa-user"></i>
-                  </span>
+                  <input name="categories" className = "input" type="text" placeholder="Categorías del proyecto" />
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
