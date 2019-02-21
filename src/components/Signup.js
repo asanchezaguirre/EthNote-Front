@@ -36,58 +36,58 @@ class Signup extends Component {
       
         <div className="fondo__signup">
           <form onSubmit={ this.onSubmitHandle } className="signup_bg">
-            <div class="field">
-              <label class="label">Nombre</label>
-              <div class="control has-icons-left has-icons-right">
-                <input name="name" class="input" type="text" placeholder="Text input" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-user"></i>
+            <div className ="field">
+              <label className ="label">Nombre</label>
+              <div className ="control has-icons-left has-icons-right">
+                <input name="name" className ="input" type="text" placeholder="Text input" />
+                <span className ="icon is-small is-left">
+                  <i className ="fas fa-user"></i>
                 </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-check"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <div class="control has-icons-left has-icons-right">
-                <input name="email" class="input" type="email" placeholder="Email input" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-exclamation-triangle"></i>
+                <span className ="icon is-small is-right">
+                  <i className ="fas fa-check"></i>
                 </span>
               </div>
             </div>
-            <div class="field">
-              <label class="label">Password</label>
-              <div class="control has-icons-left has-icons-right">
-                <input name="password" class="input" type="password" placeholder="Email input" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
+            <div className ="field">
+              <label className ="label">Email</label>
+              <div className ="control has-icons-left has-icons-right">
+                <input name="email" className ="input" type="email" placeholder="Email input" />
+                <span className ="icon is-small is-left">
+                  <i className ="fas fa-envelope"></i>
                 </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-exclamation-triangle"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Número Telefónico</label>
-              <div class="control has-icons-left has-icons-right">
-                <input name="phoneNumber" class="input" type="tel" placeholder="Num Telefónico input" />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                  <i class="fas fa-exclamation-triangle"></i>
+                <span className ="icon is-small is-right">
+                  <i className ="fas fa-exclamation-triangle"></i>
                 </span>
               </div>
             </div>
-            <div class="field">
-              <label class="label">Occupation</label>
-              <div class="control">
-                <div class="select">
+            <div className ="field">
+              <label className ="label">Password</label>
+              <div className ="control has-icons-left has-icons-right">
+                <input name="password" className ="input" type="password" placeholder="Email input" />
+                <span className ="icon is-small is-left">
+                  <i className ="fas fa-envelope"></i>
+                </span>
+                <span className ="icon is-small is-right">
+                  <i className ="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+            </div>
+            <div className ="field">
+              <label className ="label">Número Telefónico</label>
+              <div className ="control has-icons-left has-icons-right">
+                <input name="phoneNumber" className ="input" type="tel" placeholder="Num Telefónico input" />
+                <span className ="icon is-small is-left">
+                  <i className ="fas fa-envelope"></i>
+                </span>
+                <span className ="icon is-small is-right">
+                  <i className ="fas fa-exclamation-triangle"></i>
+                </span>
+              </div>
+            </div>
+            <div className ="field">
+              <label className ="label">Occupation</label>
+              <div className ="control">
+                <div className ="select">
                   <select name="occupation">
                     <option>Seleccionar estudiante</option>
                     <option>Investigador</option>
@@ -97,9 +97,9 @@ class Signup extends Component {
                 </div>
               </div>
             </div>
-            <div class="field is-grouped">
-              <div class="control">
-                <button type='submit'  variant='contained' class="button is-link">Submit</button>
+            <div className ="field is-grouped">
+              <div className ="control">
+                <button type='submit'  variant='contained' className ="button is-link">Submit</button>
               </div>
             </div>
           </form>

@@ -8,6 +8,7 @@
     "date-fns": "^2.0.0-alpha.27",
     "material-ui": "^0.20.2",
     "material-ui-pickers": "^2.2.1",
+    "nexmo": "^2.4.1",
     "react": "^16.8.1",
     "react-bulma-components": "^2.3.0",
     "react-dom": "^16.8.1",

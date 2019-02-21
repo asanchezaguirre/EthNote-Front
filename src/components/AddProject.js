@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import latino from '../images/latino.jpg'
+import latino from '../images/latino.jpg';
+
+const Nexmo = require('nexmo');
 
 
 class AddProject extends Component {
@@ -14,6 +16,7 @@ class AddProject extends Component {
       }
     }
   }
+
     
   componentDidMount () {
     fetch('https://stormy-falls-13377.herokuapp.com/api/v1/users', {
@@ -43,6 +46,7 @@ class AddProject extends Component {
       })
   }
 
+
   onSubmit = e => {
 
     e.preventDefault();
@@ -63,32 +67,25 @@ class AddProject extends Component {
             user: this.state.user._id
           
           })
-          
-        })
+            
+        }) 
+
+
 
         .then(response => response.json())
+        
         .then(data => {
-          if(typeof data.token !== "undefined") {
-
-            localStorage.setItem("token", data.token);
-            const url = window.decodeURIComponent(this.props.location.search);
-            if (url !== '') {
-              this.props.history.push('/' + url.split('/')[1]);
-            }else {
-              this.props.history.push('/login')
-            }
-          }else {
+          //console.log("dentro de data", data)
+          //this.send()  
             this.setState({
               error: {
                 status: true,
                 message: data.message
               }
             })
-          }
         })
         .catch(e => alert(e));
-        this.props.history.push('/projects')
-        
+        this.props.history.push('/projects')  
       }
 
 
@@ -102,57 +99,56 @@ class AddProject extends Component {
       	<div>
           <img src={latino} className="cover_image"/>
         </div>
-      	Agregar proyecto
-        <form onSubmit={this.onSubmit}>
-        	<div class="field">
-                <label class="label has-text-dark">Título</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input name="title" class="input" type="text" placeholder="Text input" />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
+        <form className = "add-project-form" onSubmit={this.onSubmit}>
+        	<div className = "field">
+                <label className = "label has-text-dark">Título</label>
+                <div className = "control has-icons-left has-icons-right">
+                  <input name="title" className = "input" type="text" placeholder="Text input" />
+                  <span className = "icon is-small is-left">
+                    <i className = "fas fa-user"></i>
                   </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                  </span>
-                </div>
-          </div>
-          <div class="field">
-                <label class="label has-text-dark">Tema</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input name="topic" class="input" type="text" placeholder="Text input" />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
+                  <span className = "icon is-small is-right">
+                    <i className = "fas fa-check"></i>
                   </span>
                 </div>
           </div>
-          <div class="field">
-                <label class="label has-text-dark">Objetivo</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input name="objective" class="input" type="text" placeholder="Text input" />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
+          <div className = "field">
+                <label className = "label has-text-dark">Tema</label>
+                <div className = "control has-icons-left has-icons-right">
+                  <input name="topic" className = "input" type="text" placeholder="Text input" />
+                  <span className = "icon is-small is-left">
+                    <i className = "fas fa-user"></i>
                   </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
-                  </span>
-                </div>
-          </div>
-          <div class="field">
-                <label class="label has-text-dark">Categorías</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input name="categories" class="input" type="text" placeholder="Text input" />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-check"></i>
+                  <span className = "icon is-small is-right">
+                    <i className = "fas fa-check"></i>
                   </span>
                 </div>
           </div>
-          <button type='submit'  variant='contained' class="button is-link is-small">Agregar Proyecto</button>
+          <div className = "field">
+                <label className = "label has-text-dark">Objetivo</label>
+                <div className = "control has-icons-left has-icons-right">
+                  <input name="objective" className = "input" type="text" placeholder="Text input" />
+                  <span className = "icon is-small is-left">
+                    <i className = "fas fa-user"></i>
+                  </span>
+                  <span className = "icon is-small is-right">
+                    <i className = "fas fa-check"></i>
+                  </span>
+                </div>
+          </div>
+          <div className = "field">
+                <label className = "label has-text-dark">Categorías</label>
+                <div className = "control has-icons-left has-icons-right">
+                  <input name="categories" className = "input" type="text" placeholder="Text input" />
+                  <span className = "icon is-small is-left">
+                    <i className = "fas fa-user"></i>
+                  </span>
+                  <span className = "icon is-small is-right">
+                    <i className = "fas fa-check"></i>
+                  </span>
+                </div>
+          </div>
+          <button type='submit'  variant='contained' className ="button is-link is-large is-fullwidth is-outlined">Agregar Proyecto</button>
         </form>
       </div>
     );

@@ -79,31 +79,19 @@ onSubmit = e => {
           <form onSubmit={this.onSubmit}>
             Agregar notas
             <div>
-              <p>Ubicación</p><input name="location" class="input is-success" type="text" placeholder="Ubicacion" />
-              <p>Fecha</p><input name="date" class="input is-success" type="text" placeholder="Fecha" />
-              <p>Periodo</p><input name="period" class="input is-success" type="text" placeholder="Periodo" />
+              <p>Ubicación</p><input name="location" className ="input is-success" type="text" placeholder="Ubicacion" />
+              <p>Fecha</p><input name="date" className ="input is-success" type="text" placeholder="Fecha" />
+              <p>Periodo</p><input name="period" className ="input is-success" type="text" placeholder="Periodo" />
             </div>
-            <textarea name="listOfText1" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
-            <textarea name="listOfText2" class="input" placeholder="10 lines of textarea" rows="10" class="textarea is-small"></textarea>
+            <textarea name="listOfText1" className ="input" placeholder="10 lines of textarea" rows="10" className ="textarea is-small"></textarea>
+            <textarea name="listOfText2" className ="input" placeholder="10 lines of textarea" rows="10" className ="textarea is-small"></textarea>
               <div>
                 Agregar Fotografìas
               </div>
-                <form action='/api/images' method="post" enctype="multipart/form-data">              
-                  <div class="file">
-                    <label class="file-label">
-                      <input class="file-input" type="file" name="image" placeholder="Nombre del archivo"/>
-                      <span class="file-cta">
-                        <span class="file-icon">
-                          <i class="fas fa-upload"></i>
-                        </span>
-                        <span class="file-label">
-                          Selecciona archivo…
-                        </span>
-                      </span>
-                    </label>
-                  </div>
-                </form>
-            <button type='submit' class="button is-link is-small">Agregar Nota</button>
+                
+                      <input className ="file-input" type="file" name="listOfPhotos" placeholder="Nombre del archivo"/>
+                      
+            <button type='submit' className ="button is-link is-small">Agregar Nota</button>
           </form>
       </div>
     );

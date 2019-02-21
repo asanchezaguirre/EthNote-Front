@@ -58,28 +58,28 @@ class Login extends Component {
 	  			<h1>ETH</h1>
 	  			<h1>NOTE</h1>
 	  				<form onSubmit={ this.onSubmit } className="buttons_bg">
-	                    <div class="field">
-						  <p class="control has-icons-left has-icons-right">
-						    <input name='email' class="input" type="email" placeholder="Email"/>
-						    <span class="icon is-small is-left">
-						      <i class="fas fa-envelope"></i>
+	                    <div className ="field">
+						  <p className ="control has-icons-left has-icons-right">
+						    <input name='email' className ="input" type="email" placeholder="Email"/>
+						    <span className ="icon is-small is-left">
+						      <i className ="fas fa-envelope"></i>
 						    </span>
-						    <span class="icon is-small is-right">
-						      <i class="fas fa-check"></i>
+						    <span className ="icon is-small is-right">
+						      <i className ="fas fa-check"></i>
 						    </span>
 						  </p>
 						</div>
-						<div class="field">
-						  <p class="control has-icons-left">
-						    <input name='password' class="input" type="password" placeholder="Password"/>
-						    <span class="icon is-small is-left">
-						      <i class="fas fa-lock"></i>
+						<div className ="field">
+						  <p className ="control has-icons-left">
+						    <input name='password' className ="input" type="password" placeholder="Password"/>
+						    <span className ="icon is-small is-left">
+						      <i className ="fas fa-lock"></i>
 						    </span>
 						  </p>
 						</div>
 						{ this.state.error.status && <p>{ this.state.error.message }</p>}
-	                    <button class="button is-link is-normal">Login</button>
-	                    <Link to='/signup'><button class="button is-info is-normal">Sign Up</button></Link>
+	                    <button className="button is-link is-normal">Login</button>
+	                    <Link to='/signup'><button className ="button is-info is-normal">Sign Up</button></Link>
                     </form>
                 </div>  
 	  	</div>

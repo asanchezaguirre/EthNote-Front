@@ -60,43 +60,43 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-		<nav class="navbar" role="navigation" aria-label="main navigation">
-		  	<div class="navbar-brand">
+		<nav className ="navbar" role="navigation" aria-label="main navigation">
+		  	<div className ="navbar-brand">
 		      <Link to='/'><img src={logo} width="112" height="28"/></Link>
-			    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+			    <a role="button" className ="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 			      <span aria-hidden="true"></span>
 			      <span aria-hidden="true"></span>
 			      <span aria-hidden="true"></span>
 			    </a>
 		 	</div>
-		  <div id="navbarBasicExample" class="navbar-menu">
-		    <div class="navbar-start">
-		        <p class="navbar-item">Acerca de</p>
-		    <div class="navbar-item has-dropdown is-hoverable">
-		    	<p class="navbar-link"><Link to='/projects'>Proyectos</Link></p>
-		    	<div class="navbar-dropdown">
-		        	<p class="navbar-item"><Link to='/addproject'>Agregar</Link></p>
-					<p class="navbar-item"><Link to='/editproject'>Editar</Link></p> 
+		  <div id="navbarBasicExample" className="navbar-menu">
+		    <div className ="navbar-start">
+		        <p className ="navbar-item">Acerca de</p>
+		    <div className ="navbar-item has-dropdown is-hoverable">
+		    	<p className ="navbar-link"><Link to='/projects'>Proyectos</Link></p>
+		    	<div className ="navbar-dropdown">
+		        	<p className ="navbar-item"><Link to='/addproject'>Agregar</Link></p>
+					<p className ="navbar-item"><Link to='/editproject'>Editar</Link></p> 
 		        </div>
 		    </div>
 		    </div>
-		    <div class="navbar-end">
-		      <div class="navbar-item">
+		    <div className ="navbar-end">
+		      <div className ="navbar-item">
 		      	{!isLoggedIn() && (
-		      		<div class="buttons">
-			          <button class="button is-link">
+		      		<div className ="buttons">
+			          <button className ="button is-link">
 			            <strong>Sign up</strong>
 			          </button>
-			          <button class="button is-light">Log in</button>
+			          <button className ="button is-light">Log in</button>
 			        </div>
 		            
 		          )}
 		          {isLoggedIn() && (
-		          	<div>
+		          	<div className="navbar-item">
 			        	<Link className='NavMenu' to='/login'>
 			              <p>Hola {this.state.name}</p>
 			            </Link>
-			            <button onClick={ this.handleLogout }>Logout</button>
+			            <button className ="button is-light" onClick={ this.handleLogout }>Logout</button>
 		            </div>
 		        )}
 		      </div>

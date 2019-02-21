@@ -82,30 +82,30 @@ class ListOfNotes extends Component {
       </div>
         Lista de notas
         {this.state.notes.map(note => (
-           <div class="card">
-                  <header class="card-header">
-                    <p class="card-header-title">{note.location}</p>
-                    <a href="#" class="card-header-icon" aria-label="more options">
-                      <span class="icon">
-                        <i class="fas fa-angle-down" aria-hidden="true"></i>
+           <div className ="card">
+                  <header className ="card-header">
+                    <p className ="card-header-title">{note.location}</p>
+                    <a href="#" className ="card-header-icon" aria-label="more options">
+                      <span className ="icon">
+                        <i className ="fas fa-angle-down" aria-hidden="true"></i>
                       </span>
                     </a>
                   </header>
-                  <div class="card-content">
-                    <div class="content">
+                  <div className ="card-content">
+                    <div className ="content">
                       <p>{note.date}</p>
                       <p>{note.period}</p>
                       <br/>
                     </div>
                   </div>
-                  <footer class="card-footer">
+                  <footer className ="card-footer">
                    <Link  to={`/notes/${note._id}`}><button>Ver detalle</button></Link>
                   </footer>
                 </div>
               
              ))}
     <div>
-      <Link to='/addnotes'><button class="button is-link is-small">Agregar Nota</button></Link>
+      <Link to='/addnotes'><button className ="button is-link is-small">Agregar Nota</button></Link>
     </div>
     
 

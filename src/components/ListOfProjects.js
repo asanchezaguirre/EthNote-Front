@@ -73,37 +73,42 @@ class ListOfProjects extends Component {
     return (
       <div>
       	<div>
+        <div className="call-to-action-container">
+          <span className = "title is-2 is-spaced has-text-centered" >Lista de proyectos</span>
+          <Link to='/addproject'><button className = "button is-link is-outlined">Agregar Proyecto</button></Link>
+        </div> 
           <img src={metro} className = "cover_image"/>
         </div>
-      	Lista de proyectos
+      	<div className="cards-container">
         {this.state.projects.map(project => (
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title">{project.title}</p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
+          
+            <div className = "card">
+            <header className = "card-header">
+            <p>Tìtulo del proyecto:</p>
+              <p className = "card-header-title">{project.title}</p>
+             
             </header>
-            <div class="card-content">
-              <div class="content">
-                <p>{project.objective}</p>
-                <p>{project.categories}</p>
+            <div className = "card-content">
+              <div className = "content">
+                
+                <p>Objetivo: {project.objective}</p>
+                 
+                <p>Categorias: {project.categories}</p>
                 <br/>
               </div>
             </div>
-            <footer class="card-footer">
-              <Link to='/notes' class="card-footer-item"><button onClick={()=>this.props.onChangeValue(project._id)}>Seleccionar</button></Link>
+            <footer className = "card-footer">
+              <Link to='/notes' className = "card-footer-item"><button className="button is-link is-outlined" onClick={()=>this.props.onChangeValue(project._id)}>Seleccionar</button></Link>
            
-             <Link to='/editproject' class="card-footer-item"><button onClick={()=>this.props.onChangeValue(project._id)}>Editar</button></Link>
+             <Link to='/editproject' className = "card-footer-item"><button className="button is-link is-outlined" onClick={()=>this.props.onChangeValue(project._id)}>Editar</button></Link>
             </footer>
           </div>
+          
+          
       	
 		   ))}
-	  	  <div>
-      		<Link to='/addproject'><button class="button is-link is-small">Agregar Proyecto</button></Link>
-      	</div>    
+        </div>
+	  	     
       </div>
     );
   }

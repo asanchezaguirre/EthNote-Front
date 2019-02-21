@@ -29,6 +29,16 @@
 	width: 270px;
 
 }
+.home_cover{
+  background: url("./images/madero.jpg");
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .cover_image {
   max-height: 28rem;
   width:100%;
@@ -68,4 +78,50 @@
   width: 100px;
   height: 38px;
   margin: 1%;
+}
+.cards-container{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.card{
+  min-width: 32%;
+  margin: 5px;
+  background: rgba(216, 210, 210, 0.80);
+}
+  
+.card-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.call-to-action-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-project-form{
+    width: 80%;
+    background-color: rgba(216, 210, 210, 0.80);
+    margin: 0 auto;
+}
+.field {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    padding: 2%;
+}
+.note-background{
+  background: url("./images/notebook.jpeg");
+  background-size: cover;
+  height: 100vh;
+  flex-direction: column;
+}
+.note{
+  background: none;
+  margin: 0 2%;
+}
+.is-parent{
+  background-color: #7a76764d;
 }

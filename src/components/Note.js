@@ -52,30 +52,28 @@ componentDidMount(){
   render() { 
     
     return (
-      <div>
-      	
-	    <div>
-	        <img src={iglesia} is-3by1/>
-	    </div>
-      	Detalle de nota 
-      {
-      	<div class="tile is-vertical is-2">
-      		<div class="tile">
-  		      	<div class="tile is-parent is-vertical">
-  			        <article class="tile is-child notification is-dark">
-  			          <p class="title">Lugar: {this.state.note.location}</p>
-  			          <p class="title">Fecha: {this.state.note.date}</p> 
-                  <p class="title">Periodo: {this.state.note.period}</p>
-                  <p class="title">Nota Descriptiva: {this.state.text}</p>
-                  <p class="title">Nota Personal: {this.state.text1}</p>
-                 
-                  
-  			        </article>   
-  		      	</div>
-  		    </div>	   
-        </div>
-        }
+      <div className="note-background">
+      	<div className="note">
+          <p>Detalle de nota </p>
+        {
+          <div className ="tile is-vertical">
+            <div className ="tile">
+                <div className ="tile is-parent is-vertical">
+                  <article className ="tile is-child notification note">
+                    <p className ="subtittle is-4 has-text-weight-semibold">Lugar: {this.state.note.location}</p>
+                    <p className ="subtittle is-4 has-text-weight-semibold">Fecha: {this.state.note.date}</p> 
+                    <p className ="subtittle is-4 has-text-weight-semibold">Periodo: {this.state.note.period}</p>
+                    <p className ="subtittle is-4 has-text-weight-semibold">Nota Descriptiva: {this.state.text}</p>
+                    <p className ="subtittle is-4 has-text-weight-semibold">Nota Personal: {this.state.text1}</p>
+                    
+                  </article>   
+                </div>
+            </div>     
+          </div>
+          }
       </div>
+    </div>
+      	
     );
   }
 }
