@@ -84,10 +84,12 @@ class NavBar extends Component {
 		      <div className ="navbar-item">
 		      	{!isLoggedIn() && (
 		      		<div className ="buttons">
-			          <button className ="button is-link">
+			          <Link to='/signup'>
+                <button className ="button is-link">
 			            <strong>Sign up</strong>
 			          </button>
-			          <button className ="button is-light">Log in</button>
+                </Link>
+			          <Link to='login'><button className ="button is-light">Log in</button></Link>
 			        </div>
 		            
 		          )}
