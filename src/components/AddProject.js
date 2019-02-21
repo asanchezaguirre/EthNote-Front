@@ -45,7 +45,20 @@ class AddProject extends Component {
         })
       })
   }
+/*
+send = e => {
+const nexmo = new Nexmo({
+  apiKey: 'c15f7567',
+  apiSecret: 'iV8HdeSCXLvQboP9'
+})
 
+const from = 'Nexmo'
+const to = '525548165810'
+const text = 'Hello from Nexmo'
+
+nexmo.message.sendSms(from, to, text)
+}
+*/
 
   onSubmit = e => {
 
@@ -73,7 +86,7 @@ class AddProject extends Component {
 
 
         .then(response => response.json())
-        
+     
         .then(data => {
           //console.log("dentro de data", data)
           //this.send()  
@@ -84,6 +97,7 @@ class AddProject extends Component {
               }
             })
         })
+        //.then(this.send())
         .catch(e => alert(e));
         this.props.history.push('/projects')  
       }
