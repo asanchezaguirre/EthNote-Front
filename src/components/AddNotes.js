@@ -78,7 +78,7 @@ onSubmit = e => {
             Agregar notas
             <div>
               <p>Ubicación</p><input name="location" className ="input is-success" type="text" placeholder="Ubicacion" />
-              <p>Fecha</p><input name="date" className ="input is-success" type="text" placeholder="Fecha" />
+              <p>Fecha</p><input name="date" className ="input is-success" type="date" placeholder="Fecha" />
               <p>Periodo</p><input name="period" className ="input is-success" type="text" placeholder="Periodo" />
             </div>
             <div className="container_addnote">
