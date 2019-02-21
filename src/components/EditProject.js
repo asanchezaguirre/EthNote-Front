@@ -8,6 +8,7 @@ class EditProject extends Component {
     this.state = {
       users: [],
       local:'',
+      project: {},
       error: {
         status: false,
         message: ""
@@ -16,6 +17,7 @@ class EditProject extends Component {
   }
     
   componentDidMount () {
+    this.getProjects()
     fetch('https://stormy-falls-13377.herokuapp.com/api/v1/users', {
       headers:{
           "Authorization": `barear ${localStorage.getItem("token")}`
@@ -43,6 +45,31 @@ class EditProject extends Component {
       })
   }
 
+
+  //Mostrar datos en value
+
+  getProjects = () => {
+   
+    const API_URL1 = 'https://stormy-falls-13377.herokuapp.com/api/v1'
+    fetch(`${ API_URL1 }/projects/${this.props.data}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("aqui esta ", data.data)
+        this.setState({
+          project: data.data
+        })
+      })
+      .catch(e => alert(e))
+  }
+
+
+
+//Post de la nueva informaciòn
   onSubmit = e => {
 
     e.preventDefault();
@@ -92,16 +119,18 @@ class EditProject extends Component {
       }
 
   render() {
+    //console.log(this.state.projects)
     return (
       <div>
         <div>
           <img src={barrio} className="cover_image"/>
         </div>
+        {
         <form className = "add-project-form" onSubmit={this.onSubmit}>
           <div className = "field_addproject">
                 <label className = "label has-text-dark">Título</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="title" className = "input" type="text" placeholder="Título del  proyecto" />
+                  <input name="title" className = "input" type="text" placeholder={this.state.project.title}/>
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -110,7 +139,7 @@ class EditProject extends Component {
           <div  className = "field_addproject">
                 <label className = "label has-text-dark">Tema</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="topic" className = "input" type="text" placeholder="Tema del proyecto" />
+                  <input name="topic" className = "input" type="text" placeholder={this.state.project.topic}/>
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -119,7 +148,7 @@ class EditProject extends Component {
           <div className = "field_addproject">
                 <label className = "label has-text-dark">Objetivo</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="objective" className = "input" type="text" placeholder="Objetivo del proyecto" />
+                  <input name="objective" className = "input" type="text" placeholder={this.state.project.objective} />
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -128,7 +157,7 @@ class EditProject extends Component {
           <div className = "field_addproject">
                 <label className = "label has-text-dark">Categorías</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="categories" className = "input" type="text" placeholder="Categorìas del proyecto" />
+                  <input name="categories" className = "input" type="text" placeholder={this.state.project.categories}/>
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -136,6 +165,7 @@ class EditProject extends Component {
           </div>
           <button type='submit'  variant='contained' className ="button is-link is-large is-fullwidth is-outlined">Editar Proyecto</button>
         </form>
+      }
       </div>
     );
   }
