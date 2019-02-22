@@ -8,7 +8,10 @@ class EditProject extends Component {
     this.state = {
       users: [],
       local:'',
-      project: {},
+      title:'',
+      topic:'',
+      objective:'',
+      categories:'',
       error: {
         status: false,
         message: ""
@@ -45,6 +48,9 @@ class EditProject extends Component {
       })
   }
 
+  //Función para autocompletar input
+  changeProject = e => this.setState({[e.target.name]:[e.target.value]})
+
 
   //Mostrar datos en value
 
@@ -61,7 +67,10 @@ class EditProject extends Component {
       .then(data => {
         console.log("aqui esta ", data.data)
         this.setState({
-          project: data.data
+          title: data.data.title,
+          topic:data.data.topic,
+          objective:data.data.objective,
+          categories:data.data.categories,
         })
       })
       .catch(e => alert(e))
@@ -125,12 +134,12 @@ class EditProject extends Component {
         <div>
           <img src={barrio} className="cover_image"/>
         </div>
-        {
+        
         <form className = "add-project-form" onSubmit={this.onSubmit}>
           <div className = "field_addproject">
                 <label className = "label has-text-dark">Título</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="title" className = "input" type="text" placeholder={this.state.project.title}/>
+                  <input name="title" className = "input" type="text" value={this.state.title} onChange={this.changeProject}/>
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -139,7 +148,7 @@ class EditProject extends Component {
           <div  className = "field_addproject">
                 <label className = "label has-text-dark">Tema</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="topic" className = "input" type="text" placeholder={this.state.project.topic}/>
+                  <input name="topic" className = "input" type="text" value={this.state.topic} onChange={this.changeProject}/>
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -148,7 +157,7 @@ class EditProject extends Component {
           <div className = "field_addproject">
                 <label className = "label has-text-dark">Objetivo</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="objective" className = "input" type="text" placeholder={this.state.project.objective} />
+                  <input name="objective" className = "input" type="text" value={this.state.objective} onChange={this.changeProject}/>
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -157,7 +166,7 @@ class EditProject extends Component {
           <div className = "field_addproject">
                 <label className = "label has-text-dark">Categorías</label>
                 <div className = "control has-icons-left has-icons-right">
-                  <input name="categories" className = "input" type="text" placeholder={this.state.project.categories}/>
+                  <input name="categories" className = "input" type="text" value={this.state.categories} onChange={this.changeProject}/>
                   <span className = "icon is-small is-right">
                     <i className = "fas fa-check"></i>
                   </span>
@@ -165,11 +174,10 @@ class EditProject extends Component {
           </div>
           <button type='submit'  variant='contained' className ="button is-link is-large is-fullwidth is-outlined">Editar Proyecto</button>
         </form>
-      }
+      
       </div>
     );
   }
 }
 
 export default EditProject;
-

@@ -54,7 +54,7 @@ const nexmo = new Nexmo({
 
 const from = 'Nexmo'
 const to = '525548165810'
-const text = 'Hello from Nexmo'
+const text = 'Un nuevo proyecto ha sido agregado desde tu cuenta ETHNOT'
 
 nexmo.message.sendSms(from, to, text)
 }
@@ -89,7 +89,6 @@ nexmo.message.sendSms(from, to, text)
      
         .then(data => {
           //console.log("dentro de data", data)
-          //this.send()  
             this.setState({
               error: {
                 status: true,
