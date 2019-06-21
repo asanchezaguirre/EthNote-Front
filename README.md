@@ -74,9 +74,32 @@ El usuario podrá listar y añadir proyectos, y notas relacionadas a los mismos,
         8. Proyecto(lista de notas)
         9. Ver el texto de la nota
 
-1. <a name="splash"></a>**Splash**
-   -   Descripción del punto 1 en la lista anterior.
-2. <a name="login"></a>**Login**
-    <img src=../imagen.>
+1. <a name="splash"></a>**User story 1**
+    - **User story**: Como usuario requiero de una vista principal que de la bienvenida a la web y permita navegar entre los diversos componentes.
+     - **Assumptions**: El usuario podrá visualizar la página principal y tendrá acceso, mediante el login, al resto de las vistas de la web application. El usuario que no se encuentre dado de alta, podrá acceder a la vista de signup. 
+     - **Funcionalidad**: 
+         • El usuario puede obtener la vista principal y acceder a la vista de login
+         • El usuario puede registrarse 
+         • El usuario ingresará email y password para poder acceder a su sesión
+         
+2. <a name="splash"></a>**User story 2**
+    - **User story**:Como usuario quiero visualizar una lista de proyectos, así como agregar y borrar proyectos. Además de recibir una notificación sobre un proyecto dado de alta.
+     - **Assumptions**: El usuario podrá obtener una vista en donde se muestre los proyectos que ha dado de alta. El Back-end acepta las solicitudes GET, POST y DELETE, que permitirán: mostrar la lista de proyectos que pertenecen al usuario, agregar un nuevo proyecto y borrar uno ya existente, respectivamente.
+     - **Funcionalidad**: 
+         • El usuario puede obtener la vista de todos sus proyectos por título
+         • El usuario puede  borrar  y editar un proyecto
+         • El usuario puede agregar un proyecto en una nueva vista, poniendo como datos requeridos el tìtulo y temas y como opcionales tópicos y objetivos.
+         • Se enviará un mensaje al dar de alta un proyecto
+
+3. <a name="splash"></a>**User story 3**
+    - **User story**:Como usuario podré visualizar un proyecto y las notas que integran el mismo identificadas por lugar y fecha. Así como crear una nueva nota que integre las dos perspectivas etnográficas de la observación participante.
+     - **Assumptions**:  El usuario podrá obtener una vista en donde se muestre el nombre del proyecto que ha dado de alta, así como una lista de las notas que lo integran. También podrá agregar y borrar notas. El Back-end acepta las solicitudes GET, POST y DELETE, que permitirán: mostrar la lista de notas, agregar una nueva nota y borrar una ya existente.
+     - **Funcionalidad**: 
+          • El usuario puede obtener la vista de su proyecto y las notas que lo integran
+          • El usuario puede  borrar una nota
+          • El usuario puede agregar una nota en una nueva vista, poniendo como datos requeridos la ubicación y la fecha y como opcional el periodo.
+          • El usuario podrá agregar con texto las dos perspectivas etnográficas de la observación participante.
+          • -El usuario puede agregar fotografías 
+   
 
     
