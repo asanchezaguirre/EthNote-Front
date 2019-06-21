@@ -5,11 +5,12 @@
 ## Tabla de Contenido
 1. [Herramientas utilizadas](#descripcion)
 2. [Descripción de la aplicación web](#descripcion-func)
-3. [Descripción funcional](#fundamentos)
+3. [Funsamentos del producto](#fundamentos)
     1. [Usuario objetivo](#usuario)
     2. [Research](#research)
     3. [Problemas a resolver para el usuario](#problemas)
-4. [Planeación](#planeacion)
+    4. [User stories](#user-stories)
+
 ## <a name="descripcion"></a> Descripción de producto:
 - Una web application dirigida a personas/investigadores que quieran emplear una herramienta digital de investigación cualitativa para realizar anotaciones durante el trabajo de campo: un diario de campo digital.
 
@@ -60,7 +61,7 @@ El usuario podrá listar y añadir proyectos, y notas relacionadas a los mismos,
     - Otorga a usuarixs flexibilidad, gran capacidad de almacenamiento y gestión, al brindar la oportunidad de acceder a notas de manera organizada, sin que nada se pierda.
 
 
-## <a name="sketching"></a> Sketching y Descripciones ##
+## <a name="user-stories"></a> User-stories ##
 
 - *Lista general de todos las vistas*:
         1. Home
@@ -74,30 +75,8 @@ El usuario podrá listar y añadir proyectos, y notas relacionadas a los mismos,
         9. Ver el texto de la nota
 
 1. <a name="splash"></a>**Splash**
--   Descripción del punto 1 en la lista anterior.
+   -   Descripción del punto 1 en la lista anterior.
 2. <a name="login"></a>**Login**
     <img src=../imagen.>
 
-    - Descripción:
-        - Inicio de sesión por medio de...
-
-2.  <a name="sketch-login"></a>**Sketch Feed**
-    - <img src=img.png>
-    - Sección principal con menú : 
-        - Nombre de la sección:
-            - Qué contiene la sección. 
-            - contenido de la sección.
-            - contenido de la sección.
-            - contenido de la sección.
-              
-        - Otra sección o consumo API. 
-        - Otra sección: 
-            - contenido de sección.  
-    -Tipo de menú: 
-        - Menú Item. 
-        - Menú Item. 
-        - Menú Item. 
-        - Menú Item. 
-
-
-
+    
