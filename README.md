@@ -12,9 +12,7 @@
     4. [User stories](#user-stories)
 
 ## <a name="descripcion"></a> Descripción de producto:
-- Una web application dirigida a personas/investigadores que quieran emplear una herramienta digital de investigación cualitativa para realizar anotaciones durante el trabajo de campo: un diario de campo digital.
-
-Permite crear diversos proyectos, cada uno de los cuales contará con sus notas de campo específicas, otorgando flexibilidad, gran capacidad de almacenamiento y gestión, al brindar la oportunidad de acceder a notas de manera organizada, sin que nada se pierda.
+- Una web application dirigida a personas/investigadores que quieran emplear una herramienta digital de investigación cualitativa para realizar anotaciones durante el trabajo de campo: un diario de campo digital.Permite crear diversos proyectos, cada uno de los cuales contará con sus notas de campo específicas, otorgando flexibilidad, gran capacidad de almacenamiento y gestión, al brindar la oportunidad de acceder a notas de manera organizada, sin que nada se pierda.
  
 El usuario podrá listar y añadir proyectos, y notas relacionadas a los mismos, pudiendo identificar con facilidad fechas, periodo de campo, lugar de campo y tópicos de su investigación.
 
