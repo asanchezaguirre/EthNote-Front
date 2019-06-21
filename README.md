@@ -3,8 +3,7 @@
 
 
 ## Tabla de Contenido
-1. [Herramientas utilizadas]
-(#Api de Mercado Libre para desplegar productos)
+1. [Herramientas utilizadas](#Api de Mercado Libre para desplegar productos)
 
 2. [Descripción de la aplicación web](#descripcion-func)
 3. [Descripción funcional](#fundamentos)
