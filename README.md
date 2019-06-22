@@ -1,5 +1,7 @@
 # EthNote # 
+
 ### V1.0.0
+<img src=./src/images/home.png>
 
 
 ## Tabla de Contenido
@@ -26,7 +28,7 @@ El usuario podrá listar y añadir proyectos, y notas relacionadas a los mismos,
     - El usuario puede agregar una nota en una nueva vista, poniendo como datos requeridos la ubicación y la fecha y como opcional el periodo.
     - El usuario podrá agregar con texto las dos perspectivas etnográficas de la observación participante.
     
-    
+    <img src=./src/images/login.png>
 
 ## <a name="descripcion-func"></a> Descripción funcional: 
 
@@ -40,6 +42,7 @@ El usuario podrá listar y añadir proyectos, y notas relacionadas a los mismos,
     - Editar proyectos
     - Agregar notas
     - Términos y condiciones. 
+
 
 - <a name="navegacion"></a> Acerca de la navegación:
     - **Navegación No Lineal**: Uso de tabs para facilitar la navegación del usuario para que sea consistente y fácilmente identificable y que pueda saltar de una sección a otra.
@@ -99,5 +102,5 @@ El usuario podrá listar y añadir proyectos, y notas relacionadas a los mismos,
           • El usuario podrá agregar con texto las dos perspectivas etnográficas de la observación participante.
           • -El usuario puede agregar fotografías 
    
-
+ <img src=./src/images/detalle.png>
     
